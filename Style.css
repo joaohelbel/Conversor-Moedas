@@ -21,8 +21,13 @@
 .coluna{
     margin-top: 30px;
     border: 1px solid black;
+    background: rgb(139,195,34);
+    background: linear-gradient(0deg, rgba(139,195,34,1) 0%, rgba(78,138,47,1) 100%);
 }
 .resultado{
     background-color: white;
     
+}
+body{
+    background-image: url(image.png);
 }
