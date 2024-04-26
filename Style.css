@@ -1,0 +1,28 @@
+.limitador{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.botao{
+    border: 1px solid black;
+    background-color: rgb(205, 200, 255);
+}
+.botao:hover{
+    background-color: rgb(148, 138, 253);
+    transition: 0.5s;
+}
+.botao1{
+    border: 1px solid black;
+    background-color: rgb(252, 185, 185);
+}
+.botao1:hover{
+    background-color: rgb(254, 139, 139);
+    transition: 0.5s;
+}
+.coluna{
+    margin-top: 30px;
+    border: 1px solid black;
+}
+.resultado{
+    background-color: white;
+    
+}

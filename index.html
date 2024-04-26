@@ -11,10 +11,10 @@
 </head>
 <body>
     <div class="limitador">
-        <div class="container-fluid">
+        <div class="container-fluid full">
             <div class="row">
                 <div class="col-md-4"></div>
-                <div class="col-md-4">
+                <div class="col-md-4 coluna" style="background-color: rgb(152, 177, 253);">
                     <h1>Conversor de moeda</h1>
                     <div class="row ml-2">
                         <p class="dol">Dólar <input type="checkbox"></p>
@@ -22,15 +22,51 @@
                         <p class="dol ml-2">Euro <input type="checkbox"></p>
                         <p class="dol ml-2">Bitcoin <input type="checkbox"></p>
                     </div>
-                    <p>R$: <input type="number"></p>
-                    <div class="row">
-                        
+                    <p>R$: <input id="valor" type="number"></p>
+                    <div class="row ml-4 mb-5">
+                        <button class="botao mr-2" type="button" onclick="calcular()">Converter</button>
+                        <button class="botao1">Apagar</button>
                     </div>
+                    <div class="col-md-3"><p>USD: <input id="rdolar" type="text"></p></div>
+                    <div class="col-md-3"><p>GBP: <input id="rlibra" type="number" ></p></div>
+                    <div class="col-md-3"><p>EUR: <input id="reuro" type="number" readonly></p></div>
+                    <div class="col-md-3"><p>Btc: <input id="rbit" type="number" readonly></p></div>
                 </div>
                 <div class="col-md-4"></div>
             </div>
         </div>
     </div>
-    
+    <script type="text/javascript">
+        function calcular() {
+            let dol, lib, eur, bit;
+
+
+            let valor = document.getElementById("valor");
+
+            let a = parseInt(valor.value);
+
+            dol = 0.2;
+            lib = 0.16;
+            eur = 0.18;
+            bit = 0.0000031;
+
+            let dl = a * dol;
+            let lb = a * lib;
+            let er = a * eur;
+            let bt = a * bit;
+
+            document.getElementById("rdolar").value = dl
+            document.getElementById("rlibra").value = lb
+            document.getElementById("reuro").value = er
+            document.getElementById("rbit").value = bt
+
+            rdolar.innerHTML = dl;
+            rlibra.innerHTML = lb;
+            reuro.innerHTML = er;
+            rbit.innerHTML = bt;
+        }
+
+
+    </script>
 </body>
 </html>
